@@ -38,25 +38,9 @@ const fetchWithRetry = async (url, options, retries = 5, backoff = 1000) => {
   }
 };
 
-const generateFullWordPool = () => {
-  return [
-    { "word": "analyze", "grade": 8, "difficulty": "intermediate", "notions": ["academic"], "definition": "To examine something in detail to understand it.", "part_of_speech": "verb", "synonyms": ["examine", "study"], "antonyms": ["ignore"], "root": { "origin": "Greek", "root": "analusis", "meaning": "to break up" }, "memory_tip": "Loosening the parts to see how they fit.", "badges": ["word-wizard"], "example_sentence": "In science class, we will analyze the chemical composition." },
-    { "word": "benevolent", "grade": 8, "difficulty": "intermediate", "notions": ["descriptive"], "definition": "Kind and helpful; well-meaning.", "part_of_speech": "adjective", "synonyms": ["kind", "generous"], "antonyms": ["malevolent"], "root": { "origin": "Latin", "root": "bene", "meaning": "well" }, "memory_tip": "Bene (good) + Volunteer.", "badges": ["etymologist"], "example_sentence": "The benevolent teacher spent her weekends tutoring." },
-    { "word": "reluctant", "grade": 7, "difficulty": "easy", "notions": ["descriptive"], "definition": "Unwilling and hesitant.", "part_of_speech": "adjective", "synonyms": ["hesitant"], "antonyms": ["eager"], "root": { "origin": "Latin", "root": "luctari", "meaning": "to struggle" }, "memory_tip": "Wrestling with a decision.", "badges": [], "example_sentence": "She was reluctant to jump into the cold pool." },
-    { "word": "contradict", "grade": 8, "difficulty": "easy", "notions": ["academic"], "definition": "To say the opposite; to be inconsistent.", "part_of_speech": "verb", "synonyms": ["disagree"], "antonyms": ["agree"], "root": { "origin": "Latin", "root": "contra + dict", "meaning": "against + speak" }, "memory_tip": "Speak against someone.", "badges": ["etymologist"], "example_sentence": "The evidence seems to contradict his statement." },
-    { "word": "meticulous", "grade": 9, "difficulty": "hard", "notions": ["descriptive"], "definition": "Showing great attention to detail.", "part_of_speech": "adjective", "synonyms": ["careful"], "antonyms": ["sloppy"], "root": { "origin": "Latin", "root": "metus", "meaning": "fear" }, "memory_tip": "Afraid of making a mistake.", "badges": ["word-wizard"], "example_sentence": "Her meticulous preparation ensured success." },
-    { "word": "ephemeral", "grade": 9, "difficulty": "hard", "notions": ["descriptive"], "definition": "Lasting for a very short time.", "part_of_speech": "adjective", "synonyms": ["fleeting"], "antonyms": ["permanent"], "root": { "origin": "Greek", "root": "epi + hemera", "meaning": "on + day" }, "memory_tip": "A mayfly lives only for a day.", "badges": ["etymologist"], "example_sentence": "The beauty of a rainbow is ephemeral." },
-    { "word": "pandemonium", "grade": 9, "difficulty": "hard", "notions": ["descriptive"], "definition": "Wild and noisy disorder.", "part_of_speech": "noun", "synonyms": ["chaos"], "antonyms": ["order"], "root": { "origin": "Greek", "root": "pan + daimon", "meaning": "all + demon" }, "memory_tip": "Place of all demons.", "badges": ["etymologist"], "example_sentence": "Pandemonium broke out in the stadium." },
-    { "word": "persistent", "grade": 7, "difficulty": "easy", "notions": ["descriptive"], "definition": "Continuing firmly in spite of difficulty.", "part_of_speech": "adjective", "synonyms": ["tenacious"], "antonyms": ["irresolute"], "root": { "origin": "Latin", "root": "per + sistere", "meaning": "through + to stand" }, "memory_tip": "Standing through challenges.", "badges": [], "example_sentence": "With persistent effort, she mastered the trick." },
-    { "word": "ambiguous", "grade": 9, "difficulty": "hard", "notions": ["academic"], "definition": "Open to more than one interpretation.", "part_of_speech": "adjective", "synonyms": ["unclear"], "antonyms": ["explicit"], "root": { "origin": "Latin", "root": "ambi", "meaning": "both" }, "memory_tip": "Driven in both directions.", "badges": ["etymologist"], "example_sentence": "The ending of the movie was ambiguous." },
-    { "word": "innovate", "grade": 8, "difficulty": "intermediate", "notions": ["stem"], "definition": "To introduce new methods or ideas.", "part_of_speech": "verb", "synonyms": ["pioneer"], "antonyms": ["stagnate"], "root": { "origin": "Latin", "root": "novus", "meaning": "new" }, "memory_tip": "Bringing in something new.", "badges": ["etymologist"], "example_sentence": "Companies must innovate to stay ahead." },
-    { "word": "scrupulous", "grade": 9, "difficulty": "hard", "notions": ["academic"], "definition": "Diligent, thorough, and extremely attentive to details.", "part_of_speech": "adjective", "synonyms": ["meticulous"], "antonyms": ["careless"], "root": { "origin": "Latin", "root": "scrupus", "meaning": "sharp stone" }, "memory_tip": "Like having a sharp stone in your shoe that you can't ignore.", "badges": ["word-wizard"], "example_sentence": "The researcher was scrupulous in her data collection." }
-  ];
-};
-
 const App = () => {
-  const allWords = useMemo(() => generateFullWordPool(), []);
-  
+  const [allWords, setAllWords] = useState([]);
+  const [loading, setLoading] = useState({ story: false, quiz: false, tts: false, words: true });
   const [difficulty, setDifficulty] = useState('all');
   const [roundWords, setRoundWords] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -64,30 +48,141 @@ const App = () => {
   const [favorites, setFavorites] = useState(new Set());
   const [doneWords, setDoneWords] = useState(new Set());
   const [missedWords, setMissedWords] = useState(new Set());
-
-  // Gemini State
   const [aiContent, setAiContent] = useState({ story: "", quiz: null });
-  const [loading, setLoading] = useState({ story: false, quiz: false, tts: false });
   const [errorMsg, setErrorMsg] = useState("");
 
+  // Load vocabulary from JSON file
+  useEffect(() => {
+    const loadVocabulary = async () => {
+      try {
+        setLoading(prev => ({ ...prev, words: true }));
+        const response = await fetch('/data/vocab1000.json');
+        if (!response.ok) throw new Error('Failed to load vocabulary');
+        const data = await response.json();
+        
+        // Process words to match our expected format
+        const processedWords = data.words.map(word => ({
+          word: word.word,
+          grade: word.grade,
+          difficulty: word.difficulty || inferDifficulty(word.grade),
+          notions: word.notions || [],
+          definition: word.definition,
+          part_of_speech: word.part_of_speech,
+          synonyms: word.synonyms || [],
+          antonyms: word.antonyms || [],
+          root: word.root || { origin: "", root: "", meaning: "" },
+          memory_tip: word.memory_tip || "",
+          badges: word.badges || [],
+          example_sentence: word.example_sentence || ""
+        }));
+        
+        setAllWords(processedWords);
+        setLoading(prev => ({ ...prev, words: false }));
+      } catch (error) {
+        console.error('Error loading vocabulary:', error);
+        setErrorMsg("Failed to load vocabulary. Using fallback words.");
+        // Fallback to basic words if JSON fails
+        setAllWords(getFallbackWords());
+        setLoading(prev => ({ ...prev, words: false }));
+      }
+    };
+
+    loadVocabulary();
+  }, []);
+
+  // Infer difficulty from grade level if not specified
+  const inferDifficulty = (grade) => {
+    if (grade <= 7) return 'easy';
+    if (grade === 8) return 'intermediate';
+    return 'hard';
+  };
+
+  // Fallback words if JSON loading fails
+  const getFallbackWords = () => [
+    { "word": "analyze", "grade": 8, "difficulty": "intermediate", "notions": ["academic"], "definition": "To examine something in detail to understand it.", "part_of_speech": "verb", "synonyms": ["examine", "study"], "antonyms": ["ignore"], "root": { "origin": "Greek", "root": "analusis", "meaning": "to break up" }, "memory_tip": "Loosening the parts to see how they fit.", "badges": ["word-wizard"], "example_sentence": "In science class, we will analyze the chemical composition." },
+    { "word": "benevolent", "grade": 8, "difficulty": "intermediate", "notions": ["descriptive"], "definition": "Kind and helpful; well-meaning.", "part_of_speech": "adjective", "synonyms": ["kind", "generous"], "antonyms": ["malevolent"], "root": { "origin": "Latin", "root": "bene", "meaning": "well" }, "memory_tip": "Bene (good) + Volunteer.", "badges": ["etymologist"], "example_sentence": "The benevolent teacher spent her weekends tutoring." },
+    { "word": "reluctant", "grade": 7, "difficulty": "easy", "notions": ["descriptive"], "definition": "Unwilling and hesitant.", "part_of_speech": "adjective", "synonyms": ["hesitant"], "antonyms": ["eager"], "root": { "origin": "Latin", "root": "luctari", "meaning": "to struggle" }, "memory_tip": "Wrestling with a decision.", "badges": [], "example_sentence": "She was reluctant to jump into the cold pool." }
+  ];
+
+  // Weighted random selection - mastered words have 20% probability vs 100% for others
+  const selectWeightedWords = useCallback((pool, count) => {
+    const weightedPool = [];
+    
+    pool.forEach(word => {
+      const weight = doneWords.has(word.word) ? 0.2 : 1.0;
+      const copies = Math.max(1, Math.floor(weight * 10));
+      for (let i = 0; i < copies; i++) {
+        weightedPool.push(word);
+      }
+    });
+
+    // Shuffle weighted pool
+    const shuffled = [...weightedPool].sort(() => 0.5 - Math.random());
+    
+    // Select unique words
+    const selected = [];
+    const selectedWords = new Set();
+    
+    for (const word of shuffled) {
+      if (!selectedWords.has(word.word) && selected.length < count) {
+        selected.push(word);
+        selectedWords.add(word.word);
+      }
+      if (selected.length >= count) break;
+    }
+    
+    return selected;
+  }, [doneWords]);
+
   const fetchNewSet = useCallback(() => {
+    if (allWords.length === 0) return;
+    
     let pool = allWords;
     if (difficulty !== 'all') {
       pool = allWords.filter(w => w.difficulty === difficulty);
     }
+    
     const numToPick = Math.min(pool.length, 10);
-    const shuffled = [...pool].sort(() => 0.5 - Math.random());
-    setRoundWords(shuffled.slice(0, numToPick));
+    const selected = selectWeightedWords(pool, numToPick);
+    
+    setRoundWords(selected);
     setCurrentIndex(0);
     setIsFlipped(false);
-    setDoneWords(new Set());
-    setMissedWords(new Set());
+    // DON'T reset counters - they persist across rounds
     setAiContent({ story: "", quiz: null });
-  }, [difficulty, allWords]);
+  }, [difficulty, allWords, selectWeightedWords]);
 
   useEffect(() => {
-    fetchNewSet();
-  }, [fetchNewSet]);
+    if (allWords.length > 0) {
+      fetchNewSet();
+    }
+  }, [allWords, difficulty]);
+
+  // Load saved progress from localStorage
+  useEffect(() => {
+    try {
+      const savedDone = localStorage.getItem('vocabmaster_done');
+      const savedMissed = localStorage.getItem('vocabmaster_missed');
+      const savedFavorites = localStorage.getItem('vocabmaster_favorites');
+      
+      if (savedDone) setDoneWords(new Set(JSON.parse(savedDone)));
+      if (savedMissed) setMissedWords(new Set(JSON.parse(savedMissed)));
+      if (savedFavorites) setFavorites(new Set(JSON.parse(savedFavorites)));
+    } catch (error) {
+      console.error('Error loading saved progress:', error);
+    }
+  }, []);
+
+  // Save progress to localStorage
+  useEffect(() => {
+    try {
+      localStorage.setItem('vocabmaster_done', JSON.stringify([...doneWords]));
+      localStorage.setItem('vocabmaster_missed', JSON.stringify([...missedWords]));
+      localStorage.setItem('vocabmaster_favorites', JSON.stringify([...favorites]));
+    } catch (error) {
+      console.error('Error saving progress:', error);
+    }
+  }, [doneWords, missedWords, favorites]);
 
   const word = roundWords[currentIndex];
 
@@ -115,7 +210,6 @@ const App = () => {
       const buffer = new Uint8Array(binaryData.length);
       for (let i = 0; i < binaryData.length; i++) buffer[i] = binaryData.charCodeAt(i);
 
-      // Create WAV (Assuming 24kHz PCM from Gemini TTS)
       const wavHeader = new ArrayBuffer(44);
       const view = new DataView(wavHeader);
       const sampleRate = 24000;
@@ -218,7 +312,52 @@ const App = () => {
     setFavorites(next);
   };
 
-  if (!word) return <div className="p-20 text-center font-bold text-slate-400">Loading your word pool...</div>;
+  const markAsMastered = (wordText) => {
+    const next = new Set(doneWords);
+    next.add(wordText);
+    setDoneWords(next);
+    
+    // Remove from missed if it was there
+    const missed = new Set(missedWords);
+    missed.delete(wordText);
+    setMissedWords(missed);
+  };
+
+  const markAsMissed = (wordText) => {
+    const next = new Set(missedWords);
+    next.add(wordText);
+    setMissedWords(next);
+    
+    // Remove from mastered if it was there
+    const done = new Set(doneWords);
+    done.delete(wordText);
+    setDoneWords(done);
+  };
+
+  // Reset all progress
+  const resetProgress = () => {
+    if (window.confirm('Reset all progress? This will clear mastered, missed, and favorite words.')) {
+      setDoneWords(new Set());
+      setMissedWords(new Set());
+      setFavorites(new Set());
+      localStorage.removeItem('vocabmaster_done');
+      localStorage.removeItem('vocabmaster_missed');
+      localStorage.removeItem('vocabmaster_favorites');
+    }
+  };
+
+  if (loading.words) {
+    return (
+      <div className="min-h-screen bg-slate-50 flex items-center justify-center">
+        <div className="text-center">
+          <Loader2 className="w-12 h-12 animate-spin text-indigo-600 mx-auto mb-4" />
+          <p className="text-slate-600 font-bold">Loading vocabulary...</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (!word) return <div className="p-20 text-center font-bold text-slate-400">No words available. Try changing difficulty.</div>;
 
   return (
     <div className="min-h-screen bg-slate-50 p-4 md:p-8 flex flex-col items-center font-sans text-slate-800">
@@ -241,7 +380,9 @@ const App = () => {
             <h1 className="text-2xl font-black tracking-tight flex items-center gap-2">
               VocabMaster AI <Sparkles size={18} className="text-indigo-400" />
             </h1>
-            <p className="text-xs text-slate-400 font-bold uppercase tracking-widest">Grade 7-9 Builder</p>
+            <p className="text-xs text-slate-400 font-bold uppercase tracking-widest">
+              {allWords.length} Words • Grade 7-9
+            </p>
           </div>
         </div>
 
@@ -259,10 +400,10 @@ const App = () => {
       </header>
 
       {/* Stats and Refresh */}
-      <div className="max-w-2xl w-full grid grid-cols-4 gap-3 mb-6">
+      <div className="max-w-2xl w-full grid grid-cols-5 gap-3 mb-6">
         <div className="bg-white px-4 py-3 rounded-2xl border border-slate-100 shadow-sm text-center">
           <span className="block text-[10px] text-slate-400 font-black uppercase">Word</span>
-          <span className="text-lg font-black">{currentIndex + 1}/10</span>
+          <span className="text-lg font-black">{currentIndex + 1}/{roundWords.length}</span>
         </div>
         <div className="bg-white px-4 py-3 rounded-2xl border border-slate-100 shadow-sm text-center">
           <span className="block text-[10px] text-green-500 font-black uppercase tracking-tighter">Mastered</span>
@@ -278,6 +419,13 @@ const App = () => {
         >
           <RefreshCw size={18} className="text-indigo-600 group-hover:rotate-180 transition-transform duration-500" />
           <span className="text-[10px] text-indigo-600 font-black uppercase mt-1">New Set</span>
+        </button>
+        <button 
+          onClick={resetProgress}
+          className="bg-rose-50 hover:bg-rose-100 px-4 py-3 rounded-2xl border border-rose-100 flex flex-col items-center justify-center transition-all group active:scale-95"
+        >
+          <RotateCcw size={18} className="text-rose-600" />
+          <span className="text-[10px] text-rose-600 font-black uppercase mt-1">Reset</span>
         </button>
       </div>
 
@@ -310,12 +458,22 @@ const App = () => {
               {word.word}
             </h2>
 
-            <div className="flex gap-3">
+            <div className="flex gap-3 flex-wrap justify-center">
               {word.badges.map(b => (
                 <span key={b} className="flex items-center gap-1 text-[10px] font-black bg-amber-50 text-amber-600 border border-amber-100 px-3 py-1 rounded-lg uppercase">
                   <Award size={12} /> {b}
                 </span>
               ))}
+              {doneWords.has(word.word) && (
+                <span className="flex items-center gap-1 text-[10px] font-black bg-green-50 text-green-600 border border-green-100 px-3 py-1 rounded-lg uppercase">
+                  <CheckCircle2 size={12} /> Mastered
+                </span>
+              )}
+              {missedWords.has(word.word) && (
+                <span className="flex items-center gap-1 text-[10px] font-black bg-red-50 text-red-600 border border-red-100 px-3 py-1 rounded-lg uppercase">
+                  <XCircle size={12} /> Review
+                </span>
+              )}
             </div>
 
             <div className="absolute bottom-10 text-slate-300 flex flex-col items-center gap-2">
@@ -330,8 +488,8 @@ const App = () => {
               <h3 className="text-3xl font-black tracking-tight capitalize">{word.word}</h3>
               <div className="flex gap-2">
                 <button onClick={(e) => { e.stopPropagation(); setIsFlipped(false); }} className="p-2 hover:bg-white/10 rounded-lg"><RotateCcw size={18} /></button>
-                <button onClick={() => setMissedWords(prev => new Set(prev).add(word.word))} className="p-2 bg-red-500/20 hover:bg-red-500/40 rounded-lg border border-red-500/40"><XCircle size={18} className="text-red-400" /></button>
-                <button onClick={() => setDoneWords(prev => new Set(prev).add(word.word))} className="p-2 bg-green-500/20 hover:bg-green-500/40 rounded-lg border border-green-500/40"><CheckCircle2 size={18} className="text-green-400" /></button>
+                <button onClick={() => markAsMissed(word.word)} className="p-2 bg-red-500/20 hover:bg-red-500/40 rounded-lg border border-red-500/40"><XCircle size={18} className="text-red-400" /></button>
+                <button onClick={() => markAsMastered(word.word)} className="p-2 bg-green-500/20 hover:bg-green-500/40 rounded-lg border border-green-500/40"><CheckCircle2 size={18} className="text-green-400" /></button>
               </div>
             </div>
 

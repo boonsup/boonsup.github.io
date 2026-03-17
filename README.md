@@ -10,10 +10,13 @@ An intelligent vocabulary learning application for grades 7-9, powered by Google
 ## 🌟 Features
 
 ### Core Learning Experience
-- **📚 11 Curated Vocabulary Words** - Carefully selected for grades 7-9
+- **📚 1000+ Vocabulary Words** - Loaded from JSON database for grades 7-9
 - **🎴 3D Flashcard System** - Interactive cards with smooth flip animations
 - **🎯 Difficulty Levels** - Filter by Easy, Intermediate, or Hard
-- **📊 Progress Tracking** - Track mastered and missed words
+- **📊 Persistent Progress Tracking** - Mastered/missed counts saved across sessions
+- **🧠 Smart Word Selection** - Mastered words appear 80% less often for optimal review
+- **💾 Auto-Save** - Progress automatically saved to browser localStorage
+- **🔄 Reset Progress** - Clear all data and start fresh anytime
 - **❤️ Favorites System** - Save your preferred words for quick review
 
 ### AI-Powered Features (Gemini API)
@@ -257,22 +260,30 @@ Contributions are welcome! Please follow these steps:
 
 ## 🏆 Word Database
 
-### Current Words (11)
-- **Easy (3)**: reluctant, persistent, contradict
-- **Intermediate (3)**: analyze, benevolent, innovate  
-- **Hard (5)**: meticulous, ephemeral, pandemonium, ambiguous, scrupulous
+### Word Source
+- **Primary**: `data/vocab1000.json` - 1000+ curated words
+- **Fallback**: 3 embedded words if JSON loading fails
+- **Dynamic Loading**: Words loaded on app start
+- **Auto-Difficulty**: Inferred from grade level if not specified
 
 ### Word Properties
 Each word includes:
-- Definition
-- Part of speech
+- Word text and definition
+- Part of speech (noun, verb, adjective, etc.)
 - Grade level (7-9)
-- Difficulty rating
+- Difficulty rating (easy/intermediate/hard)
+- Notions (academic, descriptive, etc.)
 - Etymology (origin, root, meaning)
-- Memory tip (mnemonic)
-- Synonyms & antonyms
-- Example sentence
-- Achievement badges
+- Memory tip (mnemonic device)
+- Synonyms and antonyms
+- Example sentence showing usage
+- Achievement badges (word-wizard, etymologist, etc.)
+
+### Smart Selection Algorithm
+- **New words**: 100% probability of selection
+- **Mastered words**: 20% probability (80% reduction)
+- **Weighted random**: Ensures variety while focusing on unmastered words
+- **Persistent tracking**: Progress saved in browser localStorage
 
 ## 📊 Browser Support
 
