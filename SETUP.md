@@ -25,7 +25,7 @@
    npm run dev
    ```
    
-   The app will be available at: `http://localhost:5173/engpro7/`
+   The app will be available at: `http://localhost:5173/`
 
 ## 📦 Project Structure
 
@@ -132,7 +132,7 @@ Stores the Gemini API key:
 ```bash
 npm run dev
 ```
-- Open browser to `http://localhost:5173/engpro7/`
+- Open browser to `http://localhost:5173/`
 - Verify the page loads with the first word displayed
 - Check console for any errors
 
@@ -218,7 +218,7 @@ npm install lucide-react
 
 ### Issue: Base path incorrect (404 on build)
 **Solution:**
-1. Verify [`vite.config.js`](vite.config.js) has `base: '/engpro7/'`
+1. Verify [`vite.config.js`](vite.config.js) has `base: '/'`
 2. Ensure it matches [`package.json`](package.json) homepage path
 3. Rebuild: `npm run build`
 
@@ -247,7 +247,7 @@ This creates an optimized build in `dist/` folder.
 ```bash
 npm run preview
 ```
-Test the production build locally at `http://localhost:4173/engpro7/`
+Test the production build locally at `http://localhost:4173/`
 
 ### Deploy to GitHub Pages
 
@@ -288,7 +288,7 @@ jobs:
 ### Verify Deployment
 After deployment, visit:
 ```
-https://boonsup.github.io/engpro7/
+https://boonsup.github.io/
 ```
 
 ## 📊 Performance Optimization

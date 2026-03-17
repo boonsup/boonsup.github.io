@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "homepage": "https://boonsup.github.io/engpro7",
+  "homepage": "https://boonsup.github.io",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

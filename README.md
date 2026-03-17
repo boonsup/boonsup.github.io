@@ -64,7 +64,7 @@ An intelligent vocabulary learning application for grades 7-9, powered by Google
 
 5. **Open in browser**
    
-   Navigate to: `http://localhost:5173/engpro7/`
+   Navigate to: `http://localhost:5173/`
 
 ## 📖 Usage
 
@@ -176,7 +176,7 @@ npm run preview
 
 The project is configured for deployment to GitHub Pages at:
 ```
-https://boonsup.github.io/engpro7/
+https://boonsup.github.io/
 ```
 
 ### Build & Deploy
