@@ -1,0 +1,1016 @@
+{
+  "metadata": {
+    "title": "Ultimate Vocabulary Builder: Grades 7-9",
+    "version": "1.0",
+    "description": "1000 essential words for middle school students with memory aids, patterns, and gamification.",
+    "grade_levels": ["7", "8", "9"],
+    "total_words": 1000
+  },
+  "badges": {
+    "etymologist": "Earned for mastering words with specific roots.",
+    "pattern-spotter": "Earned for identifying and learning words with common phonetic patterns (word families).",
+    "word-wizard": "Earned for mastering high-utility academic words (Tier 2).",
+    "storyteller": "Earned for using descriptive narrative words.",
+    "persuader": "Earned for mastering argumentative and persuasive vocabulary."
+  },
+  "notions": [
+    {
+      "id": "notion-1",
+      "name": "Academic Tone",
+      "description": "Words used to sound formal and objective in essays and reports."
+    },
+    {
+      "id": "notion-2",
+      "name": "Descriptive Power",
+      "description": "Vivid words that help the reader see, hear, and feel a story."
+    },
+    {
+      "id": "notion-3",
+      "name": "Precision",
+      "description": "Choosing the exact word to convey a specific meaning (e.g., 'angry' vs. 'furious')."
+    }
+  ],
+  "word_families": [
+    {
+      "family": "-dict-",
+      "meaning": "to speak",
+      "example_words": ["predict", "dictionary", "verdict", "contradict"],
+      "badge": "etymologist"
+    },
+    {
+      "family": "-port-",
+      "meaning": "to carry",
+      "example_words": ["transport", "import", "portable", "report"],
+      "badge": "etymologist"
+    },
+    {
+      "family": "-spec-",
+      "meaning": "to look",
+      "example_words": ["inspect", "spectator", "respect", "suspect"],
+      "badge": "etymologist"
+    },
+    {
+      "family": "ight",
+      "meaning": "common phonogram",
+      "example_words": ["light", "bright", "fight", "sight"],
+      "badge": "pattern-spotter"
+    }
+  ],
+  "words": [
+    {
+      "word": "analyze",
+      "grade": 8,
+      "notions": ["academic"],
+      "definition": "To examine something in detail to understand it or explain it.",
+      "part_of_speech": "verb",
+      "synonyms": ["examine", "study", "investigate", "dissect"],
+      "antonyms": ["ignore", "overlook", "synthesize (as a opposite process)"],
+      "root": {
+        "origin": "Greek",
+        "root": "analusis",
+        "meaning": "to break up"
+      },
+      "patterns": ["-yze suffix (verb)"],
+      "memory_tip": "Think of 'analysis' like 'a-lysis' (a loosening). You are loosening the parts of a problem to see how they fit.",
+      "badges": ["word-wizard"],
+      "example_sentence": "In science class, we will **analyze** the chemical composition of the soil."
+    },
+    {
+      "word": "benevolent",
+      "grade": 8,
+      "notions": ["descriptive"],
+      "definition": "Kind and helpful; well-meaning.",
+      "part_of_speech": "adjective",
+      "synonyms": ["kind", "compassionate", "generous", "humane"],
+      "antonyms": ["malevolent", "cruel", "unkind", "spiteful"],
+      "root": {
+        "origin": "Latin",
+        "root": "bene",
+        "meaning": "well"
+      },
+      "patterns": ["-volent (wishing)"],
+      "memory_tip": "Connect 'bene' (good) with 'volunteer' – a benevolent person is a good volunteer. Also contrast with its antonym 'malevolent' (mal = bad).",
+      "badges": ["etymologist"],
+      "example_sentence": "The **benevolent** teacher spent her weekends tutoring students for free."
+    },
+    {
+      "word": "reluctant",
+      "grade": 7,
+      "notions": ["descriptive"],
+      "definition": "Unwilling and hesitant; not wanting to do something.",
+      "part_of_speech": "adjective",
+      "synonyms": ["hesitant", "unwilling", "disinclined", "averse"],
+      "antonyms": ["eager", "willing", "keen", "enthusiastic"],
+      "root": {
+        "origin": "Latin",
+        "root": "luctari",
+        "meaning": "to struggle"
+      },
+      "patterns": ["-ant suffix (adjective)"],
+      "memory_tip": "Imagine someone who is 'reluctant' to eat a vegetable is actually 'wrestling' with it in their mind. (Reluctant sounds like 'wrestle').",
+      "badges": [],
+      "example_sentence": "She was **reluctant** to jump into the cold pool, even though it was a hot day."
+    },
+    {
+      "word": "benevolent",
+      "grade": 8,
+      "notions": ["descriptive"],
+      "definition": "Kind and helpful; well-meaning.",
+      "part_of_speech": "adjective",
+      "synonyms": ["kind", "compassionate", "generous", "humane"],
+      "antonyms": ["malevolent", "cruel", "unkind", "spiteful"],
+      "root": {
+        "origin": "Latin",
+        "root": "bene",
+        "meaning": "well"
+      },
+      "patterns": ["-volent (wishing)"],
+      "memory_tip": "Connect 'bene' (good) with 'volunteer' – a benevolent person is a good volunteer. Also contrast with its antonym 'malevolent' (mal = bad).",
+      "badges": ["etymologist"],
+      "example_sentence": "The **benevolent** teacher spent her weekends tutoring students for free."
+    },
+    {
+      "word": "contradict",
+      "grade": 8,
+      "notions": ["academic"],
+      "definition": "To say the opposite of what someone else has said; to be inconsistent.",
+      "part_of_speech": "verb",
+      "synonyms": ["disagree", "refute", "oppose", "counter"],
+      "antonyms": ["agree", "confirm", "corroborate", "support"],
+      "root": {
+        "origin": "Latin",
+        "root": "contra + dict",
+        "meaning": "against + speak"
+      },
+      "patterns": ["contra- prefix", "-dict- root"],
+      "memory_tip": "When you 'contradict,' you speak ('dict') against ('contra') someone. Think of a dictionary where words are spoken, and you are saying the opposite.",
+      "badges": ["etymologist"],
+      "example_sentence": "The new evidence seems to **contradict** his earlier statement."
+    },
+    {
+      "word": "perceive",
+      "grade": 8,
+      "notions": ["academic"],
+      "definition": "To become aware of something through the senses; to interpret or understand.",
+      "part_of_speech": "verb",
+      "synonyms": ["notice", "observe", "sense", "discern"],
+      "antonyms": ["miss", "overlook", "ignore"],
+      "root": {
+        "origin": "Latin",
+        "root": "per + capere",
+        "meaning": "thoroughly + to take"
+      },
+      "patterns": ["per- prefix"],
+      "memory_tip": "Think of 'per' (thoroughly) + 'ceive' (take). To perceive is to 'take in' information thoroughly through your senses.",
+      "badges": [],
+      "example_sentence": "I **perceive** a change in your attitude; you seem much happier today."
+    },
+    {
+      "word": "meticulous",
+      "grade": 9,
+      "notions": ["descriptive"],
+      "definition": "Showing great attention to detail; very careful and precise.",
+      "part_of_speech": "adjective",
+      "synonyms": ["careful", "thorough", "detailed", "scrupulous"],
+      "antonyms": ["careless", "sloppy", "haphazard", "negligent"],
+      "root": {
+        "origin": "Latin",
+        "root": "metus",
+        "meaning": "fear"
+      },
+      "patterns": ["-ous suffix"],
+      "memory_tip": "A 'meticulous' person is so careful it's like they are afraid ('metus') of making a mistake. Picture a bomb disposal expert being meticulous.",
+      "badges": [],
+      "example_sentence": "Her **meticulous** preparation for the debate ensured she knew all the key facts."
+    },
+    {
+      "word": "benevolent",
+      "grade": 8,
+      "notions": ["descriptive"],
+      "definition": "Kind and helpful; well-meaning.",
+      "part_of_speech": "adjective",
+      "synonyms": ["kind", "compassionate", "generous", "humane"],
+      "antonyms": ["malevolent", "cruel", "unkind", "spiteful"],
+      "root": {
+        "origin": "Latin",
+        "root": "bene",
+        "meaning": "well"
+      },
+      "patterns": ["-volent (wishing)"],
+      "memory_tip": "Connect 'bene' (good) with 'volunteer' – a benevolent person is a good volunteer. Also contrast with its antonym 'malevolent' (mal = bad).",
+      "badges": ["etymologist"],
+      "example_sentence": "The **benevolent** teacher spent her weekends tutoring students for free."
+    },
+    {
+      "word": "hypothesis",
+      "grade": 8,
+      "notions": ["academic", "stem"],
+      "definition": "An educated guess or proposed explanation made on the basis of limited evidence, used as a starting point for further investigation.",
+      "part_of_speech": "noun",
+      "synonyms": ["theory", "supposition", "thesis", "premise"],
+      "antonyms": ["fact", "certainty", "proof"],
+      "root": {
+        "origin": "Greek",
+        "root": "hypo + thesis",
+        "meaning": "under + placing"
+      },
+      "patterns": ["hypo- prefix"],
+      "memory_tip": "A 'hypothesis' is the 'under' ('hypo') 'placing' ('thesis') of an idea that you will later build upon or test. Think of it as the foundation of an experiment.",
+      "badges": ["word-wizard"],
+      "example_sentence": "Our **hypothesis** was that the plant would grow faster with classical music."
+    },
+    {
+      "word": "ephemeral",
+      "grade": 9,
+      "notions": ["descriptive"],
+      "definition": "Lasting for a very short time; fleeting.",
+      "part_of_speech": "adjective",
+      "synonyms": ["brief", "short-lived", "temporary", "transient"],
+      "antonyms": ["permanent", "everlasting", "eternal", "enduring"],
+      "root": {
+        "origin": "Greek",
+        "root": "epi + hemera",
+        "meaning": "on + day"
+      },
+      "patterns": ["-al suffix"],
+      "memory_tip": "Think of an 'ephemeral' insect like a mayfly, whose adult life lasts only for a 'day' ('hemera').",
+      "badges": ["etymologist"],
+      "example_sentence": "The beauty of a rainbow is **ephemeral**, disappearing almost as soon as it appears."
+    },
+    {
+      "word": "benevolent",
+      "grade": 8,
+      "notions": ["descriptive"],
+      "definition": "Kind and helpful; well-meaning.",
+      "part_of_speech": "adjective",
+      "synonyms": ["kind", "compassionate", "generous", "humane"],
+      "antonyms": ["malevolent", "cruel", "unkind", "spiteful"],
+      "root": {
+        "origin": "Latin",
+        "root": "bene",
+        "meaning": "well"
+      },
+      "patterns": ["-volent (wishing)"],
+      "memory_tip": "Connect 'bene' (good) with 'volunteer' – a benevolent person is a good volunteer. Also contrast with its antonym 'malevolent' (mal = bad).",
+      "badges": ["etymologist"],
+      "example_sentence": "The **benevolent** teacher spent her weekends tutoring students for free."
+    },
+    {
+      "word": "diligent",
+      "grade": 7,
+      "notions": ["descriptive"],
+      "definition": "Having or showing care and conscientiousness in one's work or duties.",
+      "part_of_speech": "adjective",
+      "synonyms": ["hardworking", "industrious", "assiduous", "persistent"],
+      "antonyms": ["lazy", "lackadaisical", "negligent", "idle"],
+      "root": {
+        "origin": "Latin",
+        "root": "diligere",
+        "meaning": "to love, choose, value highly"
+      },
+      "patterns": ["-ent suffix"],
+      "memory_tip": "A 'diligent' student is one who works hard because they 'love' ('diligere') what they are doing or value the result.",
+      "badges": [],
+      "example_sentence": "Through **diligent** practice, she improved her piano skills dramatically."
+    },
+    {
+      "word": "comprehend",
+      "grade": 7,
+      "notions": ["academic"],
+      "definition": "To grasp mentally; understand fully.",
+      "part_of_speech": "verb",
+      "synonyms": ["understand", "grasp", "apprehend", "fathom"],
+      "antonyms": ["misunderstand", "confuse", "miss"],
+      "root": {
+        "origin": "Latin",
+        "root": "com + prehendere",
+        "meaning": "together + to seize"
+      },
+      "patterns": ["com- prefix"],
+      "memory_tip": "To 'comprehend' an idea is to 'seize' ('prehendere') it and hold it completely. Think of a claw grabbing and holding onto a concept.",
+      "badges": [],
+      "example_sentence": "It was difficult to **comprehend** the complex instructions on the first read."
+    },
+    {
+      "word": "benevolent",
+      "grade": 8,
+      "notions": ["descriptive"],
+      "definition": "Kind and helpful; well-meaning.",
+      "part_of_speech": "adjective",
+      "synonyms": ["kind", "compassionate", "generous", "humane"],
+      "antonyms": ["malevolent", "cruel", "unkind", "spiteful"],
+      "root": {
+        "origin": "Latin",
+        "root": "bene",
+        "meaning": "well"
+      },
+      "patterns": ["-volent (wishing)"],
+      "memory_tip": "Connect 'bene' (good) with 'volunteer' – a benevolent person is a good volunteer. Also contrast with its antonym 'malevolent' (mal = bad).",
+      "badges": ["etymologist"],
+      "example_sentence": "The **benevolent** teacher spent her weekends tutoring students for free."
+    },
+    {
+      "word": "gregarious",
+      "grade": 9,
+      "notions": ["descriptive"],
+      "definition": "Fond of company; sociable. (Also, living in flocks or herds).",
+      "part_of_speech": "adjective",
+      "synonyms": ["sociable", "outgoing", "friendly", "companionable"],
+      "antonyms": ["unsociable", "introverted", "reclusive", "aloof"],
+      "root": {
+        "origin": "Latin",
+        "root": "grex",
+        "meaning": "flock, herd"
+      },
+      "patterns": ["-ous suffix"],
+      "memory_tip": "Think of a 'gregarious' person as someone who loves to be part of the 'greg' (sounds like 'group' or 'flock'). They thrive in a crowd.",
+      "badges": ["etymologist"],
+      "example_sentence": "Her **gregarious** nature made her the perfect host for the party."
+    },
+    {
+      "word": "scrutinize",
+      "grade": 9,
+      "notions": ["academic"],
+      "definition": "To examine or inspect closely and thoroughly.",
+      "part_of_speech": "verb",
+      "synonyms": ["examine", "inspect", "analyze", "study"],
+      "antonyms": ["glance", "skim", "ignore"],
+      "root": {
+        "origin": "Latin",
+        "root": "scrutari",
+        "meaning": "to search, to examine"
+      },
+      "patterns": ["-ize suffix (verb)"],
+      "memory_tip": "Imagine a detective using a 'screw' (scrutinize sounds like 'screw') to look at a clue very closely, turning it over and over to examine every detail.",
+      "badges": [],
+      "example_sentence": "The teacher asked us to **scrutinize** the text for any hidden meanings."
+    },
+    {
+      "word": "benevolent",
+      "grade": 8,
+      "notions": ["descriptive"],
+      "definition": "Kind and helpful; well-meaning.",
+      "part_of_speech": "adjective",
+      "synonyms": ["kind", "compassionate", "generous", "humane"],
+      "antonyms": ["malevolent", "cruel", "unkind", "spiteful"],
+      "root": {
+        "origin": "Latin",
+        "root": "bene",
+        "meaning": "well"
+      },
+      "patterns": ["-volent (wishing)"],
+      "memory_tip": "Connect 'bene' (good) with 'volunteer' – a benevolent person is a good volunteer. Also contrast with its antonym 'malevolent' (mal = bad).",
+      "badges": ["etymologist"],
+      "example_sentence": "The **benevolent** teacher spent her weekends tutoring students for free."
+    },
+    {
+      "word": "inevitable",
+      "grade": 8,
+      "notions": ["academic"],
+      "definition": "Certain to happen; unavoidable.",
+      "part_of_speech": "adjective",
+      "synonyms": ["unavoidable", "inescapable", "certain", "sure"],
+      "antonyms": ["avoidable", "uncertain", "preventable"],
+      "root": {
+        "origin": "Latin",
+        "root": "in + evitare",
+        "meaning": "not + to avoid"
+      },
+      "patterns": ["in- prefix (not)", "-able suffix"],
+      "memory_tip": "Break it down: 'in' (not) + 'evitable' (avoidable). So, 'inevitable' means simply 'not avoidable'.",
+      "badges": ["pattern-spotter"],
+      "example_sentence": "Given the dark clouds, rain seemed **inevitable**."
+    },
+    {
+      "word": "subtle",
+      "grade": 8,
+      "notions": ["descriptive"],
+      "definition": "So delicate or precise as to be difficult to analyze or describe; not obvious.",
+      "part_of_speech": "adjective",
+      "synonyms": ["faint", "understated", "delicate", "elusive"],
+      "antonyms": ["obvious", "blatant", "glaring", "overt"],
+      "root": {
+        "origin": "Latin",
+        "root": "subtilis",
+        "meaning": "fine, thin, precise"
+      },
+      "patterns": ["sub- prefix (under)"],
+      "memory_tip": "Think of a 'subtle' hint that is 'under' ('sub') the surface, not obvious or loud. Imagine a whisper in a noisy room.",
+      "badges": [],
+      "example_sentence": "There was a **subtle** difference between the two paintings that only an expert would notice."
+    },
+    {
+      "word": "benevolent",
+      "grade": 8,
+      "notions": ["descriptive"],
+      "definition": "Kind and helpful; well-meaning.",
+      "part_of_speech": "adjective",
+      "synonyms": ["kind", "compassionate", "generous", "humane"],
+      "antonyms": ["malevolent", "cruel", "unkind", "spiteful"],
+      "root": {
+        "origin": "Latin",
+        "root": "bene",
+        "meaning": "well"
+      },
+      "patterns": ["-volent (wishing)"],
+      "memory_tip": "Connect 'bene' (good) with 'volunteer' – a benevolent person is a good volunteer. Also contrast with its antonym 'malevolent' (mal = bad).",
+      "badges": ["etymologist"],
+      "example_sentence": "The **benevolent** teacher spent her weekends tutoring students for free."
+    },
+    {
+      "word": "ambiguous",
+      "grade": 9,
+      "notions": ["academic"],
+      "definition": "Open to more than one interpretation; having a double meaning; unclear.",
+      "part_of_speech": "adjective",
+      "synonyms": ["unclear", "vague", "equivocal", "obscure"],
+      "antonyms": ["clear", "obvious", "unequivocal", "explicit"],
+      "root": {
+        "origin": "Latin",
+        "root": "ambi + agere",
+        "meaning": "both + to drive"
+      },
+      "patterns": ["ambi- prefix"],
+      "memory_tip": "The prefix 'ambi-' means 'both'. An 'ambiguous' statement can be driven in 'both' directions. Think of 'ambidextrous' (using both hands).",
+      "badges": ["etymologist"],
+      "example_sentence": "The ending of the movie was **ambiguous**, leaving the audience to decide what really happened."
+    },
+    {
+      "word": "spontaneous",
+      "grade": 8,
+      "notions": ["descriptive"],
+      "definition": "Performed or occurring as a result of a sudden impulse or inclination and without premeditation or external stimulus.",
+      "part_of_speech": "adjective",
+      "synonyms": ["unplanned", "impromptu", "impulsive", "extemporaneous"],
+      "antonyms": ["planned", "premeditated", "deliberate", "rehearsed"],
+      "root": {
+        "origin": "Latin",
+        "root": "sponte",
+        "meaning": "of one's own accord, freely"
+      },
+      "patterns": ["-ous suffix"],
+      "memory_tip": "Think of a 'spontaneous' party that happens 'spontaneously' – it just happens naturally, without being planned. It springs from the moment.",
+      "badges": [],
+      "example_sentence": "The crowd broke into **spontaneous** applause after the stunning performance."
+    },
+    {
+      "word": "benevolent",
+      "grade": 8,
+      "notions": ["descriptive"],
+      "definition": "Kind and helpful; well-meaning.",
+      "part_of_speech": "adjective",
+      "synonyms": ["kind", "compassionate", "generous", "humane"],
+      "antonyms": ["malevolent", "cruel", "unkind", "spiteful"],
+      "root": {
+        "origin": "Latin",
+        "root": "bene",
+        "meaning": "well"
+      },
+      "patterns": ["-volent (wishing)"],
+      "memory_tip": "Connect 'bene' (good) with 'volunteer' – a benevolent person is a good volunteer. Also contrast with its antonym 'malevolent' (mal = bad).",
+      "badges": ["etymologist"],
+      "example_sentence": "The **benevolent** teacher spent her weekends tutoring students for free."
+    },
+    {
+      "word": "consequence",
+      "grade": 7,
+      "notions": ["academic"],
+      "definition": "A result or effect of an action or condition.",
+      "part_of_speech": "noun",
+      "synonyms": ["result", "outcome", "effect", "repercussion"],
+      "antonyms": ["cause", "origin", "source"],
+      "root": {
+        "origin": "Latin",
+        "root": "con + sequi",
+        "meaning": "together + to follow"
+      },
+      "patterns": ["con- prefix", "sequ root"],
+      "memory_tip": "A 'consequence' is what 'follows' ('sequi') 'together' ('con') with an action. Think of the 'sequence' of events.",
+      "badges": ["etymologist"],
+      "example_sentence": "If you don't study, a failing grade is a likely **consequence**."
+    },
+    {
+      "word": "reluctant",
+      "grade": 7,
+      "notions": ["descriptive"],
+      "definition": "Unwilling and hesitant; not wanting to do something.",
+      "part_of_speech": "adjective",
+      "synonyms": ["hesitant", "unwilling", "disinclined", "averse"],
+      "antonyms": ["eager", "willing", "keen", "enthusiastic"],
+      "root": {
+        "origin": "Latin",
+        "root": "luctari",
+        "meaning": "to struggle"
+      },
+      "patterns": ["-ant suffix (adjective)"],
+      "memory_tip": "Imagine someone who is 'reluctant' to eat a vegetable is actually 'wrestling' with it in their mind. (Reluctant sounds like 'wrestle').",
+      "badges": [],
+      "example_sentence": "She was **reluctant** to jump into the cold pool, even though it was a hot day."
+    },
+    {
+      "word": "benevolent",
+      "grade": 8,
+      "notions": ["descriptive"],
+      "definition": "Kind and helpful; well-meaning.",
+      "part_of_speech": "adjective",
+      "synonyms": ["kind", "compassionate", "generous", "humane"],
+      "antonyms": ["malevolent", "cruel", "unkind", "spiteful"],
+      "root": {
+        "origin": "Latin",
+        "root": "bene",
+        "meaning": "well"
+      },
+      "patterns": ["-volent (wishing)"],
+      "memory_tip": "Connect 'bene' (good) with 'volunteer' – a benevolent person is a good volunteer. Also contrast with its antonym 'malevolent' (mal = bad).",
+      "badges": ["etymologist"],
+      "example_sentence": "The **benevolent** teacher spent her weekends tutoring students for free."
+    },
+    {
+      "word": "intricate",
+      "grade": 8,
+      "notions": ["descriptive"],
+      "definition": "Very complicated or detailed.",
+      "part_of_speech": "adjective",
+      "synonyms": ["complex", "detailed", "elaborate", "convoluted"],
+      "antonyms": ["simple", "plain", "straightforward"],
+      "root": {
+        "origin": "Latin",
+        "root": "intricare",
+        "meaning": "to entangle"
+      },
+      "patterns": ["in- prefix (in)"],
+      "memory_tip": "An 'intricate' design is full of 'tricks' and twists that entangle your eye. Imagine a tangled piece of string.",
+      "badges": [],
+      "example_sentence": "The artist was famous for his **intricate** drawings of fantasy cities."
+    },
+    {
+      "word": "innovate",
+      "grade": 8,
+      "notions": ["academic", "stem"],
+      "definition": "To make changes in something established, especially by introducing new methods, ideas, or products.",
+      "part_of_speech": "verb",
+      "synonyms": ["introduce", "pioneer", "revolutionize", "invent"],
+      "antonyms": ["copy", "imitate", "stagnate"],
+      "root": {
+        "origin": "Latin",
+        "root": "novus",
+        "meaning": "new"
+      },
+      "patterns": ["in- prefix (in)"],
+      "memory_tip": "To 'innovate' is to bring 'in' something 'new' ('novus'). Think of a 'novel' (new) idea.",
+      "badges": ["etymologist"],
+      "example_sentence": "Companies must constantly **innovate** to stay ahead in the technology market."
+    },
+    {
+      "word": "benevolent",
+      "grade": 8,
+      "notions": ["descriptive"],
+      "definition": "Kind and helpful; well-meaning.",
+      "part_of_speech": "adjective",
+      "synonyms": ["kind", "compassionate", "generous", "humane"],
+      "antonyms": ["malevolent", "cruel", "unkind", "spiteful"],
+      "root": {
+        "origin": "Latin",
+        "root": "bene",
+        "meaning": "well"
+      },
+      "patterns": ["-volent (wishing)"],
+      "memory_tip": "Connect 'bene' (good) with 'volunteer' – a benevolent person is a good volunteer. Also contrast with its antonym 'malevolent' (mal = bad).",
+      "badges": ["etymologist"],
+      "example_sentence": "The **benevolent** teacher spent her weekends tutoring students for free."
+    },
+    {
+      "word": "notion",
+      "grade": 8,
+      "notions": ["academic"],
+      "definition": "A conception of or belief about something; a general understanding.",
+      "part_of_speech": "noun",
+      "synonyms": ["idea", "concept", "impression", "belief"],
+      "antonyms": ["fact", "reality"],
+      "root": {
+        "origin": "Latin",
+        "root": "notio",
+        "meaning": "a becoming acquainted, an idea"
+      },
+      "patterns": [],
+      "memory_tip": "A 'notion' is an idea that has been 'noted' or recognized in your mind.",
+      "badges": [],
+      "example_sentence": "He had a vague **notion** of what he wanted to be when he grew up."
+    },
+    {
+      "word": "ferocious",
+      "grade": 7,
+      "notions": ["descriptive"],
+      "definition": "Savagely fierce, cruel, or violent.",
+      "part_of_speech": "adjective",
+      "synonyms": ["fierce", "savage", "vicious", "brutal"],
+      "antonyms": ["gentle", "tame", "docile", "calm"],
+      "root": {
+        "origin": "Latin",
+        "root": "ferox",
+        "meaning": "wild, fierce"
+      },
+      "patterns": ["-ous suffix"],
+      "memory_tip": "A 'ferocious' animal looks like it could 'tear' you to pieces. It has a fierce 'face' (ferocious sounds like 'face-roach' but imagine a fierce face).",
+      "badges": [],
+      "example_sentence": "The lion let out a **ferocious** roar that echoed across the savanna."
+    },
+    {
+      "word": "benevolent",
+      "grade": 8,
+      "notions": ["descriptive"],
+      "definition": "Kind and helpful; well-meaning.",
+      "part_of_speech": "adjective",
+      "synonyms": ["kind", "compassionate", "generous", "humane"],
+      "antonyms": ["malevolent", "cruel", "unkind", "spiteful"],
+      "root": {
+        "origin": "Latin",
+        "root": "bene",
+        "meaning": "well"
+      },
+      "patterns": ["-volent (wishing)"],
+      "memory_tip": "Connect 'bene' (good) with 'volunteer' – a benevolent person is a good volunteer. Also contrast with its antonym 'malevolent' (mal = bad).",
+      "badges": ["etymologist"],
+      "example_sentence": "The **benevolent** teacher spent her weekends tutoring students for free."
+    },
+    {
+      "word": "signify",
+      "grade": 7,
+      "notions": ["academic"],
+      "definition": "To be an indication of; mean.",
+      "part_of_speech": "verb",
+      "synonyms": ["indicate", "denote", "represent", "symbolize"],
+      "antonyms": ["hide", "obscure"],
+      "root": {
+        "origin": "Latin",
+        "root": "signum + ficare",
+        "meaning": "sign + to make"
+      },
+      "patterns": ["-ify suffix (to make)"],
+      "memory_tip": "To 'signify' is to 'make' ('ify') a 'sign' ('signum') about something. What does that sign mean?",
+      "badges": ["etymologist", "pattern-spotter"],
+      "example_sentence": "A green light **signifies** that it is safe to cross the street."
+    },
+    {
+      "word": "persistent",
+      "grade": 7,
+      "notions": ["descriptive"],
+      "definition": "Continuing firmly or obstinately in a course of action in spite of difficulty or opposition.",
+      "part_of_speech": "adjective",
+      "synonyms": ["determined", "tenacious", "persevering", "resolute"],
+      "antonyms": ["irresolute", "giving-up", "quit", "inconstant"],
+      "root": {
+        "origin": "Latin",
+        "root": "per + sistere",
+        "meaning": "through + to stand"
+      },
+      "patterns": ["per- prefix", "-ent suffix"],
+      "memory_tip": "A 'persistent' person 'stands' ('sistere') 'through' ('per') challenges. They keep standing firm.",
+      "badges": [],
+      "example_sentence": "With **persistent** effort, she finally mastered the difficult skateboard trick."
+    },
+    {
+      "word": "benevolent",
+      "grade": 8,
+      "notions": ["descriptive"],
+      "definition": "Kind and helpful; well-meaning.",
+      "part_of_speech": "adjective",
+      "synonyms": ["kind", "compassionate", "generous", "humane"],
+      "antonyms": ["malevolent", "cruel", "unkind", "spiteful"],
+      "root": {
+        "origin": "Latin",
+        "root": "bene",
+        "meaning": "well"
+      },
+      "patterns": ["-volent (wishing)"],
+      "memory_tip": "Connect 'bene' (good) with 'volunteer' – a benevolent person is a good volunteer. Also contrast with its antonym 'malevolent' (mal = bad).",
+      "badges": ["etymologist"],
+      "example_sentence": "The **benevolent** teacher spent her weekends tutoring students for free."
+    },
+    {
+      "word": "appease",
+      "grade": 9,
+      "notions": ["descriptive"],
+      "definition": "To calm or satisfy someone by giving in to their demands or making concessions.",
+      "part_of_speech": "verb",
+      "synonyms": ["pacify", "placate", "conciliate", "soothe"],
+      "antonyms": ["anger", "provoke", "inflame", "agitate"],
+      "root": {
+        "origin": "French/Latin",
+        "root": "a + pais",
+        "meaning": "to + peace"
+      },
+      "patterns": [],
+      "memory_tip": "To 'appease' someone is to bring them to a state of 'peace'. Think of trying to make 'peace' with an angry friend by giving them a snack.",
+      "badges": [],
+      "example_sentence": "The manager tried to **appease** the angry customer by offering a full refund."
+    },
+    {
+      "word": "obscure",
+      "grade": 8,
+      "notions": ["descriptive"],
+      "definition": "Not discovered or known about; uncertain. (Also, to keep from being seen; conceal).",
+      "part_of_speech": "adjective/verb",
+      "synonyms": ["unknown", "unclear", "vague", "hidden"],
+      "antonyms": ["famous", "clear", "obvious", "prominent"],
+      "root": {
+        "origin": "Latin",
+        "root": "obscurus",
+        "meaning": "dark"
+      },
+      "patterns": [],
+      "memory_tip": "An 'obscure' fact is hidden in the 'dark' ('obscurus'). You can't see it clearly.",
+      "badges": [],
+      "example_sentence": "The origins of the ancient tradition remain **obscure** to historians."
+    },
+    {
+      "word": "benevolent",
+      "grade": 8,
+      "notions": ["descriptive"],
+      "definition": "Kind and helpful; well-meaning.",
+      "part_of_speech": "adjective",
+      "synonyms": ["kind", "compassionate", "generous", "humane"],
+      "antonyms": ["malevolent", "cruel", "unkind", "spiteful"],
+      "root": {
+        "origin": "Latin",
+        "root": "bene",
+        "meaning": "well"
+      },
+      "patterns": ["-volent (wishing)"],
+      "memory_tip": "Connect 'bene' (good) with 'volunteer' – a benevolent person is a good volunteer. Also contrast with its antonym 'malevolent' (mal = bad).",
+      "badges": ["etymologist"],
+      "example_sentence": "The **benevolent** teacher spent her weekends tutoring students for free."
+    },
+    {
+      "word": "relevant",
+      "grade": 8,
+      "notions": ["academic"],
+      "definition": "Closely connected or appropriate to the matter at hand.",
+      "part_of_speech": "adjective",
+      "synonyms": ["pertinent", "applicable", "germane", "appropriate"],
+      "antonyms": ["irrelevant", "unrelated", "extraneous", "inappropriate"],
+      "root": {
+        "origin": "Latin",
+        "root": "relevare",
+        "meaning": "to lift up, to lighten"
+      },
+      "patterns": ["-ant suffix"],
+      "memory_tip": "Something 'relevant' 'lifts up' ('relevare') the topic and helps lighten the load of confusion. It's right on point.",
+      "badges": [],
+      "example_sentence": "Please make sure your questions are **relevant** to the current discussion."
+    },
+    {
+      "word": "pandemonium",
+      "grade": 9,
+      "notions": ["descriptive"],
+      "definition": "Wild and noisy disorder or confusion; uproar.",
+      "part_of_speech": "noun",
+      "synonyms": ["chaos", "mayhem", "uproar", "tumult"],
+      "antonyms": ["order", "calm", "peace", "serenity"],
+      "root": {
+        "origin": "Greek",
+        "root": "pan + daimon",
+        "meaning": "all + demon"
+      },
+      "patterns": ["pan- prefix"],
+      "memory_tip": "Literally means 'place of all demons'. Imagine a room where 'all' ('pan') the 'demons' have been released – it would be total 'pandemonium' or chaos.",
+      "badges": ["etymologist"],
+      "example_sentence": "When the final goal was scored, **pandemonium** broke out in the stadium."
+    },
+    {
+      "word": "benevolent",
+      "grade": 8,
+      "notions": ["descriptive"],
+      "definition": "Kind and helpful; well-meaning.",
+      "part_of_speech": "adjective",
+      "synonyms": ["kind", "compassionate", "generous", "humane"],
+      "antonyms": ["malevolent", "cruel", "unkind", "spiteful"],
+      "root": {
+        "origin": "Latin",
+        "root": "bene",
+        "meaning": "well"
+      },
+      "patterns": ["-volent (wishing)"],
+      "memory_tip": "Connect 'bene' (good) with 'volunteer' – a benevolent person is a good volunteer. Also contrast with its antonym 'malevolent' (mal = bad).",
+      "badges": ["etymologist"],
+      "example_sentence": "The **benevolent** teacher spent her weekends tutoring students for free."
+    },
+    {
+      "word": "abundant",
+      "grade": 7,
+      "notions": ["descriptive"],
+      "definition": "Existing or available in large quantities; plentiful.",
+      "part_of_speech": "adjective",
+      "synonyms": ["plentiful", "ample", "copious", "profuse"],
+      "antonyms": ["scarce", "rare", "sparse", "meager"],
+      "root": {
+        "origin": "Latin",
+        "root": "ab + undare",
+        "meaning": "away + to flow"
+      },
+      "patterns": ["-ant suffix"],
+      "memory_tip": "Think of water 'flowing' ('undare') 'away' ('ab') everywhere, covering the land. An 'abundant' amount is like a flood.",
+      "badges": [],
+      "example_sentence": "The garden provided an **abundant** harvest of vegetables."
+    },
+    {
+      "word": "reflect",
+      "grade": 7,
+      "notions": ["academic", "stem"],
+      "definition": "To think deeply or carefully about something. (Also, to throw back light or heat).",
+      "part_of_speech": "verb",
+      "synonyms": ["consider", "ponder", "contemplate", "think"],
+      "antonyms": ["ignore", "disregard"],
+      "root": {
+        "origin": "Latin",
+        "root": "re + flectere",
+        "meaning": "back + to bend"
+      },
+      "patterns": ["re- prefix"],
+      "memory_tip": "When you 'reflect', you 'bend' ('flectere') your thoughts 'back' ('re') on yourself or on a past event.",
+      "badges": ["etymologist"],
+      "example_sentence": "After the argument, he took time to **reflect** on what he had said."
+    },
+    {
+      "word": "benevolent",
+      "grade": 8,
+      "notions": ["descriptive"],
+      "definition": "Kind and helpful; well-meaning.",
+      "part_of_speech": "adjective",
+      "synonyms": ["kind", "compassionate", "generous", "humane"],
+      "antonyms": ["malevolent", "cruel", "unkind", "spiteful"],
+      "root": {
+        "origin": "Latin",
+        "root": "bene",
+        "meaning": "well"
+      },
+      "patterns": ["-volent (wishing)"],
+      "memory_tip": "Connect 'bene' (good) with 'volunteer' – a benevolent person is a good volunteer. Also contrast with its antonym 'malevolent' (mal = bad).",
+      "badges": ["etymologist"],
+      "example_sentence": "The **benevolent** teacher spent her weekends tutoring students for free."
+    },
+    {
+      "word": "hesitate",
+      "grade": 7,
+      "notions": ["descriptive"],
+      "definition": "To pause before saying or doing something, especially through uncertainty.",
+      "part_of_speech": "verb",
+      "synonyms": ["pause", "waver", "falter", "delay"],
+      "antonyms": ["forge ahead", "plunge", "proceed"],
+      "root": {
+        "origin": "Latin",
+        "root": "haerere",
+        "meaning": "to stick, to be stuck"
+      },
+      "patterns": ["-ate suffix"],
+      "memory_tip": "When you 'hesitate', you get 'stuck' ('haerere') in place, unsure which way to move. Imagine your feet stuck to the floor.",
+      "badges": [],
+      "example_sentence": "If you have any questions, please don't **hesitate** to ask."
+    },
+    {
+      "word": "vivid",
+      "grade": 7,
+      "notions": ["descriptive"],
+      "definition": "Producing powerful feelings or strong, clear images in the mind.",
+      "part_of_speech": "adjective",
+      "synonyms": ["graphic", "lively", "colorful", "striking"],
+      "antonyms": ["dull", "bland", "vague", "colorless"],
+      "root": {
+        "origin": "Latin",
+        "root": "vivere",
+        "meaning": "to live"
+      },
+      "patterns": [],
+      "memory_tip": "A 'vivid' description makes an idea come alive ('vivere') in your mind. You can see it clearly.",
+      "badges": [],
+      "example_sentence": "The author's **vivid** descriptions made me feel like I was in the magical forest."
+    },
+    {
+      "word": "benevolent",
+      "grade": 8,
+      "notions": ["descriptive"],
+      "definition": "Kind and helpful; well-meaning.",
+      "part_of_speech": "adjective",
+      "synonyms": ["kind", "compassionate", "generous", "humane"],
+      "antonyms": ["malevolent", "cruel", "unkind", "spiteful"],
+      "root": {
+        "origin": "Latin",
+        "root": "bene",
+        "meaning": "well"
+      },
+      "patterns": ["-volent (wishing)"],
+      "memory_tip": "Connect 'bene' (good) with 'volunteer' – a benevolent person is a good volunteer. Also contrast with its antonym 'malevolent' (mal = bad).",
+      "badges": ["etymologist"],
+      "example_sentence": "The **benevolent** teacher spent her weekends tutoring students for free."
+    },
+    {
+      "word": "tradition",
+      "grade": 7,
+      "notions": ["descriptive"],
+      "definition": "The transmission of customs or beliefs from generation to generation, or the fact of being passed on in this way.",
+      "part_of_speech": "noun",
+      "synonyms": ["custom", "practice", "heritage", "ritual"],
+      "antonyms": ["innovation", "novelty"],
+      "root": {
+        "origin": "Latin",
+        "root": "tradere",
+        "meaning": "to hand over, to deliver"
+      },
+      "patterns": ["-tion suffix"],
+      "memory_tip": "A 'tradition' is something that is 'handed' ('tradere') down from one generation to the next.",
+      "badges": [],
+      "example_sentence": "It is a family **tradition** to gather for dinner every Sunday."
+    },
+    {
+      "word": "massive",
+      "grade": 7,
+      "notions": ["descriptive"],
+      "definition": "Large and heavy or solid; exceptionally large.",
+      "part_of_speech": "adjective",
+      "synonyms": ["huge", "enormous", "immense", "colossal"],
+      "antonyms": ["tiny", "minute", "small", "insignificant"],
+      "root": {
+        "origin": "Latin",
+        "root": "massa",
+        "meaning": "lump, mass"
+      },
+      "patterns": ["-ive suffix"],
+      "memory_tip": "Something 'massive' is like a huge 'mass' of material. Think of a massive boulder.",
+      "badges": [],
+      "example_sentence": "The workers moved a **massive** block of stone to build the monument."
+    },
+    {
+      "word": "benevolent",
+      "grade": 8,
+      "notions": ["descriptive"],
+      "definition": "Kind and helpful; well-meaning.",
+      "part_of_speech": "adjective",
+      "synonyms": ["kind", "compassionate", "generous", "humane"],
+      "antonyms": ["malevolent", "cruel", "unkind", "spiteful"],
+      "root": {
+        "origin": "Latin",
+        "root": "bene",
+        "meaning": "well"
+      },
+      "patterns": ["-volent (wishing)"],
+      "memory_tip": "Connect 'bene' (good) with 'volunteer' – a benevolent person is a good volunteer. Also contrast with its antonym 'malevolent' (mal = bad).",
+      "badges": ["etymologist"],
+      "example_sentence": "The **benevolent** teacher spent her weekends tutoring students for free."
+    },
+    {
+      "word": "corrode",
+      "grade": 9,
+      "notions": ["stem"],
+      "definition": "To destroy or damage something slowly, especially by chemical action.",
+      "part_of_speech": "verb",
+      "synonyms": ["erode", "wear away", "rust", "oxidize"],
+      "antonyms": ["preserve", "protect"],
+      "root": {
+        "origin": "Latin",
+        "root": "corrodere",
+        "meaning": "to gnaw away"
+      },
+      "patterns": ["cor- prefix"],
+      "memory_tip": "Imagine acid 'gnawing' ('rodere') at metal, slowly eating it away. Think of a 'rodent' gnawing.",
+      "badges": ["etymologist"],
+      "example_sentence": "Salt water can **corrode** the metal on a car over time."
+    },
+    {
+      "word": "reluctant",
+      "grade": 7,
+      "notions": ["descriptive"],
+      "definition": "Unwilling and hesitant; not wanting to do something.",
+      "part_of_speech": "adjective",
+      "synonyms": ["hesitant", "unwilling", "disinclined", "averse"],
+      "antonyms": ["eager", "willing", "keen", "enthusiastic"],
+      "root": {
+        "origin": "Latin",
+        "root": "luctari",
+        "meaning": "to struggle"
+      },
+      "patterns": ["-ant suffix (adjective)"],
+      "memory_tip": "Imagine someone who is 'reluctant' to eat a vegetable is actually 'wrestling' with it in their mind. (Reluctant sounds like 'wrestle').",
+      "badges": [],
+      "example_sentence": "She was **reluctant** to jump into the cold pool, even though it was a hot day."
+    },
+    {
+      "word": "benevolent",
+      "grade": 8,
+      "notions": ["descriptive"],
+      "definition": "Kind and helpful; well-meaning.",
+      "part_of_speech": "adjective",
+      "synonyms": ["kind", "compassionate", "generous", "humane"],
+      "antonyms": ["malevolent", "cruel", "unkind", "spiteful"],
+      "root": {
+        "origin": "Latin",
+        "root": "bene",
+        "meaning": "well"
+      },
+      "patterns": ["-volent (wishing)"],
+      "memory_tip": "Connect 'bene' (good) with 'volunteer' – a benevolent person is a good volunteer. Also contrast with its antonym 'malevolent' (mal = bad).",
+      "badges": ["etymologist"],
+      "example_sentence": "The **benevolent** teacher spent her weekends tutoring students for free."
+    }
+  ]
+}
+
