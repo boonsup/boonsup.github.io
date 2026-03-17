@@ -172,27 +172,37 @@ npm run preview
 
 ## 🌐 Deployment
 
-### GitHub Pages
+### GitHub Pages (Automatic)
 
-The project is configured for deployment to GitHub Pages at:
+The project uses **GitHub Actions** for automatic deployment to:
 ```
 https://boonsup.github.io/
 ```
 
-### Build & Deploy
+#### Quick Deploy Steps:
+1. Enable GitHub Pages in repository settings (Source: GitHub Actions)
+2. Add `VITE_GEMINI_API_KEY` to repository secrets
+3. Push to `main` branch
+4. GitHub Actions automatically builds and deploys
 
-1. **Build the project**
-   ```bash
-   npm run build
-   ```
+See **[DEPLOYMENT.md](DEPLOYMENT.md)** for complete deployment guide including:
+- Automatic deployment with GitHub Actions
+- Manual deployment options
+- Environment variable configuration
+- Custom domain setup
+- Troubleshooting tips
 
-2. **Deploy** (manual or via GitHub Actions)
-   
-   The build creates a `dist/` folder ready for deployment.
+### Build Locally
+
+```bash
+npm run build
+```
+
+The build creates an optimized `dist/` folder ready for deployment.
 
 ### Environment Variables in Production
 
-⚠️ **Security Note**: The current setup includes the API key in the client bundle. For production, consider:
+⚠️ **Security Note**: API keys are stored as GitHub Secrets during deployment. For enhanced security, consider:
 - Server-side proxy to hide API keys
 - Rate limiting per user
 - API key rotation
